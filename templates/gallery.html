@@ -1,0 +1,246 @@
+{%extends 'base.html'%}{%block head%}
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+<title>Gallery</title>
+<style>
+    body {
+        background-color: grey;
+    }
+    p {
+        color: black;
+        text-align: left;
+        font-size: 20px;
+    }
+    h5 {
+        font-family: "Kaushan Script", cursive;
+        font-style: italic;
+        font-size: 30px;
+        font-weight: bold 300;
+    }
+</style>
+{%endblock%} {%block body%}<br />
+<h3 style="text-shadow: 2px 2px 4px #000000; text-align: center">
+    Discover Maharashtra
+</h3>
+<br />
+<div class="container">
+    <div class="row">
+        <div class="col-md-3">
+            <div class="card h-100">
+                <div class="card-body">
+                    <a
+                        href="{{url_for('destination',destination_id=1)}}"
+                        style="text-decoration: none; color: black">
+                        <img
+                            class="card-img-top"
+                            src="{{url_for('static',filename='gallery/Ajanta Caves.jpg')}}"
+                            width="213.733"
+                            height="153.15"
+                            alt="" />
+                        <h5 class="card-title">Ajanta Caves</h5></a
+                    >
+                    <p class="card-text">
+                        Explore the ancient rock-cut Buddhist cave monuments in
+                        Maharashtra, India.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card h-100">
+                <div class="card-body">
+                    <a
+                        href="{{url_for('destination',destination_id=2)}}"
+                        style="text-decoration: none; color: black">
+                        <img
+                            class="card-img-top"
+                            src="{{url_for('static',filename='gallery/Ellora Caves.jpg')}}"
+                            width="213.733"
+                            height="153.15"
+                            alt="" />
+                        <h5 class="card-title">Ellora Caves</h5>
+                    </a>
+                    <p class="card-text">
+                        Discover the impressive complex of Hindu, Buddhist, Jain
+                        temples and monestaries with religious Harmony
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card h-100">
+                <div class="card-body">
+                    <a
+                        href="{{url_for('destination',destination_id=3)}}"
+                        style="text-decoration: none; color: black">
+                        <img
+                            class="card-img-top"
+                            src="{{url_for('static',filename='gallery/Mahabaleshwar.jpg')}}"
+                            width="213.733"
+                            height="153.15"
+                            alt="" />
+                        <h5 class="card-title">Mahabaleshwar</h5>
+                    </a>
+                    <p class="card-text">
+                        Escape to the hill station known for its lush greenery,
+                        strawberry farms,and breathtaking viewpoints.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card h-100">
+                <div class="card-body">
+                    <a
+                        href="{{url_for('destination',destination_id=4)}}"
+                        style="text-decoration: none; color: black">
+                        <img
+                            class="card-img-top"
+                            src="{{url_for('static',filename='gallery/Panchgani.jpg')}}"
+                            width="213.733"
+                            height="153.15"
+                            alt="" />
+                        <h5 class="card-title">Panchgani</h5>
+                    </a>
+                    <p class="card-text">
+                        Enjoy the serene beauty of this hill station, famous for
+                        its tableland, scenic views, and pleasant climate.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="mt-3"></div>
+    <div class="row">
+        <div class="col-md-3">
+            <div class="card h-100">
+                <div class="card-body">
+                    <a
+                        href="{{url_for('destination',destination_id=5)}}"
+                        style="text-decoration: none; color: black">
+                        <img
+                            class="card-img-top"
+                            src="{{url_for('static',filename='gallery/Lonavala.jpg')}}"
+                            width="213.733"
+                            height="153.15"
+                            alt="" />
+                        <h5 class="card-title">Lonavala</h5>
+                    </a>
+                    <p class="card-text">
+                        Visit the popular hill station known for its waterfalls,
+                        caves, and trekking trails.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card h-100">
+                <div class="card-body">
+                    <a
+                        href="{{url_for('destination',destination_id=6)}}"
+                        style="text-decoration: none; color: black">
+                        <img
+                            class="card-img-top"
+                            src="{{url_for('static',filename='gallery/Matheran.jpg')}}"
+                            width="213.733"
+                            height="153.15"
+                            alt="" />
+                        <h5 class="card-title">Matheran</h5>
+                    </a>
+                    <p class="card-text">
+                        Experience the charm of the smallest hill station in
+                        India, surrounded by lush forests and scenic viewpoints.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card h-100">
+                <div class="card-body">
+                    <a
+                        href="{{url_for('destination',destination_id=7)}}"
+                        style="text-decoration: none; color: black">
+                        <img
+                            class="card-img-top"
+                            src="{{url_for('static',filename='gallery/Khandala.jpg')}}"
+                            width="213.733"
+                            height="153.15"
+                            alt="" />
+                        <h5 class="card-title">Khandala</h5>
+                    </a>
+                    <p class="card-text">
+                        Relax in this hill station known for its misty valleys,
+                        waterfalls, and pleasant weather.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card h-100">
+                <div class="card-body">
+                    <a
+                        href="{{url_for('destination',destination_id=8)}}"
+                        style="text-decoration: none; color: black">
+                        <img
+                            class="card-img-top"
+                            src="{{url_for('static',filename='gallery/Igatpuri.jpg')}}"
+                            width="213.733"
+                            height="153.15"
+                            alt="" />
+                        <h5 class="card-title">Igatpuri</h5>
+                    </a>
+                    <p class="card-text">
+                        Explore the serene town surrounded by the Western Ghats,
+                        offering trekking and nature trails.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="mt-3"></div>
+    <div class="row">
+        <div class="col-md-3">
+            <div class="card h-100">
+                <div class="card-body">
+                    <a
+                        href="{{url_for('destination',destination_id=9)}}"
+                        style="text-decoration: none; color: black">
+                        <img
+                            class="card-img-top"
+                            src="{{url_for('static',filename='gallery/Bhandardara.jpg')}}"
+                            width="213.733"
+                            height="153.15"
+                            alt="" />
+                        <h5 class="card-title">Bhandardara</h5>
+                    </a>
+                    <p class="card-text">
+                        Discover the picturesque lakeside village with stunning
+                        views of Arthur Lake and Randha Falls.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card h-100">
+                <div class="card-body">
+                    <a
+                        href="{{url_for('destination',destination_id=10)}}"
+                        style="text-decoration: none; color: black">
+                        <img
+                            class="card-img-top"
+                            src="{{url_for('static',filename='gallery/Malvan.jpg')}}"
+                            width="213.733"
+                            height="153.15"
+                            alt="" />
+                        <h5 class="card-title">Malvan</h5>
+                    </a>
+                    <p class="card-text">
+                        Visit the coastal town known for its historic Sindhudurg
+                        Fort, pristine beaches, and delicious seafood.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="mt-3"></div>
+    </div>
+</div>
+{%endblock%}

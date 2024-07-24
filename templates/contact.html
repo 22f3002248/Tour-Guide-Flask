@@ -1,0 +1,71 @@
+{%extends 'base.html'%}{%block head%}
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+<title>Contact Us</title>
+<style>
+    body {
+        background-color: white;
+    }
+
+    .btn-container {
+        text-align: center;
+    }
+    h1 {
+        color: white;
+        text-shadow: 2px 2px 4px #000000;
+    }
+    label {
+        text-shadow: 2px 2px 4px #000000;
+        color: white;
+    }
+</style>
+{%endblock%}{%block body%}
+
+<div class="container mt-5">
+    <h1>Contact Us</h1>
+    <br />
+    <form method="post">
+        <div class="form-group">
+            <select name="destination" class="form-select form-select-lg mb-3">
+                <option disabled selected>Destination</option>
+                {% for destination in destinations %}
+                <option value="{{destination.destination_id}}">
+                    {{destination.destination_name}}
+                </option>
+                {% endfor %}
+            </select>
+            <br />
+        </div>
+        <div class="form-group">
+            <label for="name">Name:</label>
+            <input
+                type="text"
+                class="form-control"
+                id="name"
+                name="name"
+                placeholder="Name" />
+        </div>
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input
+                type="email"
+                class="form-control"
+                id="email"
+                name="email"
+                placeholder="Email" />
+        </div>
+        <div class="form-group">
+            <label for="message">Message:</label>
+            <textarea
+                class="form-control"
+                id="message"
+                name="message"
+                placeholder="Message"></textarea>
+        </div>
+        <br />
+        <div class="btn-container">
+            <button type="submit" class="btn btn-primary btn-lg">Submit</button>
+        </div>
+    </form>
+</div>
+
+{%endblock%}

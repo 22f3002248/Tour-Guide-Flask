@@ -1,0 +1,150 @@
+{% extends 'base.html' %} {% block head %}
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+<title>{{ destination.destination_name }} | Tour Guide</title>
+<style>
+    p {
+        color: black;
+        font-size: medium;
+        text-shadow: white;
+    }
+    h5 {
+        text-align: left;
+    }
+</style>
+{% endblock %} {% block body %}
+<div class="container">
+    <br />
+    <div class="row">
+        <div class="col-md-6">
+            <div>
+                <h3
+                    style="
+                        text-shadow: 2px 2px 4px #000000;
+                        text-align: center;
+                    ">
+                    Tour Planning
+                </h3>
+                <br />
+                {%if planning.day1 %}
+                <div class="card mb-3 border-info" style="max-width: 640px">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img
+                                src="{{ url_for('static', filename='Dayplan/'+destination.destination_name +'/day1.jpg') }}"
+                                class="img-fluid rounded-start"
+                                alt="..." />
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h4 class="card-title">Day 1</h4>
+                                <p class="card-text">{{planning.day1}}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {%endif%} {%if planning.day2%}
+                <div class="card mb-3 border-info" style="max-width: 640px">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img
+                                src="{{ url_for('static', filename='Dayplan/'+destination.destination_name +'/day2.jpg') }}"
+                                class="img-fluid rounded-start"
+                                alt="..." />
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h4 class="card-title">Day 2</h4>
+                                <p class="card-text">{{planning.day2}}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {%endif%} {%if planning.day3%}
+                <div class="card mb-3" style="max-width: 640px">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img
+                                src="{{ url_for('static', filename='Dayplan/'+destination.destination_name +'/day3.jpg') }}"
+                                class="img-fluid rounded-start"
+                                alt="..." />
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h4 class="card-title">Day 3</h4>
+                                <p class="card-text">{{planning.day3}}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {%endif%} {%if planning.day4%}
+                <div class="card mb-3 border-info" style="max-width: 640px">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img
+                                src="{{ url_for('static', filename='Dayplan/'+destination.destination_name +'/day4.jpg') }}"
+                                class="img-fluid rounded-start"
+                                alt="..." />
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h4 class="card-title">Day 4</h4>
+                                <p class="card-text">{{planning.day4}}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {%endif%} {%if planning.day5%}
+                <div class="card mb-3 border-info" style="max-width: 640px">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img
+                                src="{{ url_for('static', filename='Dayplan/'+destination.destination_name +'/day5.jpg') }}"
+                                class="img-fluid rounded-start"
+                                alt="..." />
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h4 class="card-title">Day 5</h4>
+                                <p class="card-text">{{planning.day5}}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {%endif%}
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-body">
+                    <h3 style="color: black; text-align: center">
+                        {{ destination.destination_name }}
+                    </h3>
+                    <p>
+                        <strong>District:</strong>
+                        {{ destination.destination_district }}
+                    </p>
+                    <div class="text-center">
+                        <img
+                            src="{{ url_for('static', filename='gallery/' + destination.destination_name + '.jpg') }}"
+                            alt="{{ destination.destination_name }} Image"
+                            class="img-fluid" />
+                    </div>
+                    <br />
+                    <p style="margin-top: 10px">
+                        <strong>Description:</strong>
+                        {{ destination.destination_description }}
+                    </p>
+                    <br />
+                    <div class="text-center">
+                        <a
+                            class="btn btn-primary"
+                            href="{{ url_for('enquiry', destination_id=destination.destination_id) }}">
+                            Enquire about {{ destination.destination_name }}
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
