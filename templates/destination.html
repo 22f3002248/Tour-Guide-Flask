@@ -110,6 +110,23 @@
                         </div>
                     </div>
                 </div>
+                {%endif%}{%if planning.day6%}
+                <div class="card mb-3 border-info" style="max-width: 640px">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img
+                                src="{{ url_for('static', filename='Dayplan/'+destination.destination_name +'/day6.jpg') }}"
+                                class="img-fluid rounded-start"
+                                alt="..." />
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h4 class="card-title">Day 6</h4>
+                                <p class="card-text">{{planning.day6}}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 {%endif%}
             </div>
         </div>
@@ -130,7 +147,7 @@
                             class="img-fluid" />
                     </div>
                     <br />
-                    <p style="margin-top: 10px">
+                    <p style="margin-top: 10px; text-align: justify">
                         <strong>Description:</strong>
                         {{ destination.destination_description }}
                     </p>
